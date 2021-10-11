@@ -59,7 +59,7 @@ a{
 }
 
 .content-wrap{
-    padding-top: 60px;
+    padding-top: 150px;
 }
 .wrap-title{
     font-size:2.0rem;
@@ -114,7 +114,7 @@ a{
 .charactor-table{
     font-size:1.6rem;
     width: 860px;
-    margin: 30px auto 0;
+    margin: 60px auto 0;
     border-collapse: separate;
     border-spacing: 0px;
 }
@@ -129,6 +129,10 @@ a{
     border-bottom:1px solid black;
 }
 
+.contact-form{
+    margin-top: 60px;
+}
+
 .contact-form label{
     display: flex;
     justify-content: space-between;
@@ -139,7 +143,7 @@ a{
 
 .contact-form input[type="text"]{
     border:1px solid black;
-    width: 720px;
+    width: 760px;
     height: 30px;
     padding: 3px 10px;
 }
@@ -147,11 +151,31 @@ a{
 .contact-form textarea{
     border:1px solid black;
     padding: 3px 10px;
-    width: 720px;
+    width: 760px;
     height: 180px;
 }
 
+.submit-button-wrap{
+    text-align: center;
+    margin-top:30px;
+}
+.submit-button-wrap input[type="submit"]{
+    width:200px;
+    height: 45px;
+    background: black;
+    color:white;
+    font-size:1.8rem;
+}
 
+#footer{
+    margin-top: 120px;
+    background: black;
+    color:white;
+    text-align: center;
+    color:1.4rem;
+    height: 30px;
+    line-height: 30px;
+}
 
 
 
