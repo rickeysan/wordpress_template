@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>My Work</title>
-</head>
-<body>
-  <header id="header">
-    <div class="header-upper">
+<?php
+/*
+Template Name: Home -トップページ-
+*/
+?>
 
-      <h1 class="header-site-title">
-        <a href="">My Work</a>
-      </h1>
-      <p class="header-site-subtitle">サブタイトルサブタイトルサブタイトルサブタイトル</p>
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-list-item"><a href="">Home</a></li>
-          <li class="header-list-item"><a href="">Profile</a></li>
-          <li class="header-list-item"><a href="">Works</a></li>
-          <li class="header-list-item"><a href="">Charactor</a></li>
-          <li class="header-list-item"><a href="">Blog</a></li>
-          <li class="header-list-item"><a href="">Map</a></li>
-          <li class="header-list-item"><a href="">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header-foot">
-      <img src="https://placehold.jp/1280x420.png" alt="">
-    </div>
-  </header>
-  <main id="main" class="one-column">
+<?php get_header();?>
+
+    <?php get_template_part('content','menu');?>
+
+    <main id="main" class="one-column">
     <div class="content-wrap">
       <h2 class="wrap-title">Profile</h2>
       <span class="profile-name">Rickye</span>
@@ -121,8 +97,4 @@
 
   </main>
 
-  <footer id="footer">
-    Rickyesan
-  </footer>
-</body>
-</html>
+<?php get_footer();?>
