@@ -7,6 +7,10 @@ Template Name: Home -トップページ-
 <?php get_header();?>
 
     <?php get_template_part('content','menu');?>
+    
+    <div class="header-foot">
+      <img src="https://placehold.jp/1280x420.png" alt="">
+    </div>
 
     <main id="main" class="one-column">
     <div class="content-wrap">

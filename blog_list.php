@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>My Work</title>
-</head>
-<body>
-    <header id="header">
-        <div class="header-upper">
-    
-          <h1 class="header-site-title">
-            <a href="">My Work</a>
-          </h1>
-          <p class="header-site-subtitle">サブタイトルサブタイトルサブタイトルサブタイトル</p>
-          <nav class="header-nav">
-            <ul class="header-list">
-              <li class="header-list-item"><a href="">Home</a></li>
-              <li class="header-list-item"><a href="">Profile</a></li>
-              <li class="header-list-item"><a href="">Works</a></li>
-              <li class="header-list-item"><a href="">Charactor</a></li>
-              <li class="header-list-item"><a href="">Blog</a></li>
-              <li class="header-list-item"><a href="">Map</a></li>
-              <li class="header-list-item"><a href="">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-    </header>
+<?php get_header();?>
+
+    <?php get_template_part('content','menu');?>
 
     <main id="main" class="one-column">
         <div class="main-content-wrap main-works-content-wrap">
@@ -155,9 +126,5 @@
         </div>
         
     </main>
-    <footer id="footer">
-      Rickyesan
-    </footer>
 
-</body>
-</html>
+<?php get_footer();?>

@@ -18,7 +18,6 @@
         </ul>
       </nav>
     </div>
-    <div class="header-foot">
-      <img src="https://placehold.jp/1280x420.png" alt="">
-    </div>
+    
+    
   </header>
