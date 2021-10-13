@@ -169,6 +169,11 @@ a{
     color:white;
     font-size:1.8rem;
 }
+.submit-button-wrap input[type="submit"]:hover{
+    cursor:pointer;
+    background:gainsboro;
+}
+
 
 #footer{
     margin-top: 120px;
@@ -487,3 +492,4 @@ a{
     font-size:1.6rem;
     width:520px;
 }
+
