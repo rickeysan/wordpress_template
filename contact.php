@@ -2,6 +2,8 @@
 /*
 Template Name: Contact -お問い合わせ-
 */
+error_log( 'Hello World!' );
+
 ?>
 
 <?php get_header();?>
