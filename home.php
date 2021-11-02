@@ -3,6 +3,7 @@
 Template Name: Home -トップページ-
 */
 ?>
+<?php error_log( 'Homeページです' );?>
 
 <?php get_header();?>
 

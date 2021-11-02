@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php error_log( 'categoryページです' );?>
 
     <?php get_template_part('content','menu');?>
 

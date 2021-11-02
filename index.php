@@ -1,3 +1,5 @@
+<?php error_log( 'indexページです' );?>
+
 <?php get_header();?>
 
     <?php get_template_part('content','menu');?>
