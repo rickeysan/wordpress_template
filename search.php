@@ -1,6 +1,5 @@
 <?php get_header();?>
 <?php error_log( 'searchページです' );?>
-<?php error_log('検索キーワードは'.$_GET['s']);?>
 <?php 
 
 ?>
@@ -14,10 +13,10 @@
                     <!-- 検索結果の記事 -->
                     <?php if(have_posts()):?>
                         <?php if(!$_GET['s']){ ?>
-                            <h1 class="search-page-title">検索キーワードが未入力です</h1>
+                            <h1 class="page-title">検索キーワードが未入力です</h1>
 
                         <?php } else { ?>
-                            <h1 class="search-page-title">
+                            <h1 class="page-title">
                                 「<?php echo esc_html($_GET['s']);?>」の検索結果：<?php echo $wp_query->found_posts;?>件
                             </h1>
 
@@ -46,7 +45,7 @@
                         <?php if(function_exists("pagination")) pagination($wp_query->max_num_pages);?>
                         <?php } ?>
                     <?php  else:  ?>
-                        <h1 class="search-page-title">検索されたキーワードに該当する記事はありませんでした</h1>
+                        <h1 class="page-title">検索されたキーワードに該当する記事はありませんでした</h1>
                     <?php endif;?>
                    
                 </div>

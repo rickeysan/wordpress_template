@@ -433,12 +433,15 @@ a{
     line-height: 26px;
     text-align: center;
     margin-left:15px;
-}
-.page-list-item a{
-    display: block;
     border: 1px solid black;
     border-radius: 1px;
-    
+}
+.page-list-item.active{
+    background: gainsboro;
+}
+
+.page-list-item a{
+    display: block;
 }
 .next-page-list{
     font-size: 1.8rem;
@@ -500,7 +503,7 @@ a{
     width:520px;
 }
 
-.search-page-title{
+.page-title{
     font-size: 1.8rem;
     padding-bottom: 15px;
 }

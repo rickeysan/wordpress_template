@@ -35,9 +35,7 @@
             <ul class="category-list">
             <?php
             $categories = get_categories();
-            error_log('$categoriesの中身：'.print_r($catid,true));
             foreach($categories as $category):
-
             ?>
                 <li class="category-list-item">
                     <i class="fas fa-arrow-right"></i>

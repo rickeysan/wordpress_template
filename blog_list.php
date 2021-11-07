@@ -12,10 +12,9 @@
                 <div class="main-articles-wrapper">
 
                     <!-- 記事のループ -->
-                    
                     <?php get_templa_part('loop');?>
 
-                    <?php if (function_exists("pagination")) pagination($additional_loop->max_num_pages);?>
+                    <?php if (function_exists("pagination")) pagination($wp_query->max_num_pages);?>
 <!--                     
                     <div class="page-list-wrapper">
                         <ul class="page-list">

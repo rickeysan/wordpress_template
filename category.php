@@ -15,12 +15,12 @@
                    
                 </div>
                 
+                <div class="main-sidebar-wrapper">
+                    <!-- サイドバー -->
+                    <?php get_sidebar();?>
+    
+                </div>        
             </div>
-            <div class="main-sidebar-wrapper">
-                <!-- サイドバー -->
-                <?php get_sidebar();?>
-
-            </div>        
         </div>
         
     </main>

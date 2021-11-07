@@ -18,46 +18,56 @@ add_theme_support('custom-header',$custom_header_defaults);
 register_nav_menu('mainmenu1','メインメニュー1');
 
 
-// ページネーション
-function pagination($pages='',$range=2){
-    error_log('$pagesの値：'.$pages);
-    error_log('$rangeの値：'.$range);
 
-    $showitems = ($range*2)+1;
 
+function pagination($pages = '', $range = 2) {
+    $showitems = ($range * 2) + 1;
+  
+    // 現在のページ数
     global $paged;
-    if(empty($paged)) $paged = 1;
-
-    if($pages==''){
-        global $wp_query;
-        $pages = $wp_query->max_num_pages;
-        if(!$pages){
-            $pages = 1;
-        }
+    if(empty($paged)) {
+      $paged = 1;
     }
-
+  
+    // 全ページ数
+    if($pages == '') {
+      global $wp_query;
+      $pages = $wp_query->max_num_pages;
+      if(!$pages) {
+        $pages = 1;
+      }
+    }
     error_log('$pagedの値:'.$paged);
-    error_log('$pages2の値：'.$pages);
-
-    if($pages != 1){
-        echo "<div class=\"page_list-wrapper pagenation\">\n";
-        echo "<ul class=\"page-list\">\n";
-
-        if($paged > 1) echo "<li class=\"prev\"><a href='".get_pagenum_link($paged-1)."'>Prev</a></li>\n";
-        error_log('$pages3の値：'.$pages);
-
-        for ($i=1; $i <= $pages; $i++){
-            error_log('$pages4の値：'.$pages);
-            error_log('$iの値：'.$i);
-            if($pages =! 1 && (!($i>=$paged+$range+1 || $i <=$paged-$range-1) || $pages <= $showitems)){
-                error_log('入った');
-                echo ($paged == $i) ? "<li class=\"active\">".$i."</li>\n" : "<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>\n";
-            }
+    error_log('$pagesの値:'.$pages);
+    error_log('$pagesの値:'.$pages);
+    
+    // ページ数が2ぺージ以上の場合のみ、ページネーションを表示
+    if(1 != $pages) {
+        echo '<div class="page-list-wrapper pagenation">';
+        echo '<ul class="page-list">';
+      // 1ページ目でなければ、「前のページ」リンクを表示
+      if($paged > 1) {
+        echo '<li class="page-list-item"><a href='.get_pagenum_link($paged-1).'>&lt</a></li>';      }
+      }
+      // ページ番号を表示（現在のページはリンクにしない）
+      for ($i=1; $i <= $pages; $i++) {
+        if (1 != $pages &&(!($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+          if ($paged == $i) {
+            echo '<li class="active page-list-item">'.$i.'</li>';
+          } else {
+            echo '<li class="page-list-item"><a href='.get_pagenum_link($i).'>'.$i.'</a></li>';
+          }
         }
-        if($paged < $pages) echo "<li class=\"next\"><a href=\"".get_pagenum_link($paged+1)."\">Next</a></li>\n";
+      }
+  
+      // 最終ページでなければ、「次のページ」リンクを表示
+      if ($paged < $pages) {
+        echo '<li class="next page-list-item"><a href='.get_pagenum_link($paged+1).'>&gt</a></li>';      }
+        echo '</ul>';
+        echo '</div>';
     }
-    error_log('ページネーション関数終了');
-}
+  
+        
 
 // カスタムフィールド
 
