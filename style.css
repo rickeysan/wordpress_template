@@ -45,14 +45,14 @@ a{
 .header-nav{
     margin-top:25px;
 }
-.header-list{
+.header-nav ul{
     display: flex;
     justify-content: space-evenly;
 }
-.header-list-item{
+.header-nav ul li{
     padding: 3px 5px;
 }
-.header-list-item a{
+.header-nav ul li a{
     font-size:1.6rem;
 }
 
@@ -500,3 +500,7 @@ a{
     width:520px;
 }
 
+.search-page-title{
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+}

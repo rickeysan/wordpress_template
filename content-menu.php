@@ -1,23 +1,23 @@
+<header id="header">
+  <div class="header-upper">
+    <h1 class="header-site-title">
+      <a href="<?php echo home_url();?>">
+        <!-- <img src="<?php header_image(); ?>" class="img-responsive" alt="<?Php bloginfo('name');?>"> -->
 
-  <header id="header">
-    <div class="header-upper">
-
-      <h1 class="header-site-title">
-        <a href="">My Work</a>
-      </h1>
-      <p class="header-site-subtitle">サブタイトルサブタイトルサブタイトルサブタイトル</p>
-      <nav class="header-nav">
-        <ul class="header-list">
-          <li class="header-list-item"><a href="">Home</a></li>
-          <li class="header-list-item"><a href="">Profile</a></li>
-          <li class="header-list-item"><a href="">Works</a></li>
-          <li class="header-list-item"><a href="">Charactor</a></li>
-          <li class="header-list-item"><a href="">Blog</a></li>
-          <li class="header-list-item"><a href="">Map</a></li>
-          <li class="header-list-item"><a href="">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-    
-  </header>
+      </a>
+    </h1>
+    <p class="header-site-subtitle">サブタイトルサブタイトルサブタイトルサブタイトル</p>
+    <nav class="header-nav">
+  
+      <?php wp_nav_menu(array(
+        'theme_location'=>'mainmenu1',
+        'container'=>'',
+        'menu_class'=>'header-list',
+        'items_wrap'=>'<ul>%3$s</ul>'
+        ));
+      ?>
+    </nav>
+  </div>
+  
+  
+</header>

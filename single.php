@@ -30,35 +30,30 @@
 
                         <?php endwhile;?>
 
+                        <div class="page-list-wrapper">
+                            <ul class="next-page-list">
+                                <li class="next-page-list-item">
+                                    <?php previous_post_link('&link','前の記事へ');?>
+                                </li>
+                                <li class="next-page-list-item">
+                                    <?php next_post_link('$link','次の記事へ');?>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Commentes -->
                         <?php commentes_template();?>
                     <?php else:?>
                         <h2 class="title">記事が見つかりませんでした</h2>
                         <p>検索で見つかるかもしれません</p><br>
-                        <?php get_search_fomr();?>
+                        <?php get_search_form();?>
                     <?php endif;?>
 
-                                       
-
-                    <div class="page-list-wrapper">
-                        <ul class="next-page-list">
-                            <li class="next-page-list-item">
-                                <?php previous_post_link('&link','前の記事へ');?>
-                            </li>
-                            <li class="next-page-list-item">
-                                
-                            </li>
-                        </ul>
-                    </div>
-                    
                 </div>
                 <div class="main-sidebar-wrapper">
                     <?php get_sidebar();?>
 
                 </div>        
-                
-                
-                
             </div>
         </div>
         

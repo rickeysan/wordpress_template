@@ -1,6 +1,12 @@
 <sidebar class="main-sidebar">
     <div class="sidebar-section">
-        <?php get_search_form();?>
+        <h3 class="sidebar-section-title">検索</h3>
+        <div class="sidebar-section-content">
+            <form action="" method="post" class="sidebar-search-form">
+                <input type="text" placeholder="記事を検索">
+                <input type="submit" value="">
+            </form>
+        </div>
     </div>
 
     <div class="sidebar-section">
@@ -33,17 +39,22 @@
         <h3 class="sidebar-section-title">カテゴリー</h3>
         <div class="sidebar-section-content">
             <ul class="category-list">
-            <?php
-            $categories = get_categories();
-            error_log('$categoriesの中身：'.print_r($catid,true));
-            foreach($categories as $category):
-
-            ?>
                 <li class="category-list-item">
                     <i class="fas fa-arrow-right"></i>
-                    <a href="<?php echo esc_url(get_category_link($category->term_id));?>"><?php echo $category->name;?></a>
+                    <a href="">勉強法</a>
                 </li>
-            <?php endforeach;?>
+                <li class="category-list-item">
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="">睡眠</a>
+                </li>
+                <li class="category-list-item">
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="">メンタルコントロール</a>
+                </li>
+                <li class="category-list-item">
+                    <i class="fas fa-arrow-right"></i>
+                    <a href="">食事</a>
+                </li>
             </ul>
         </div>
     </div>
