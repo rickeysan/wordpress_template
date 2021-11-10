@@ -368,16 +368,13 @@ a{
 }
 
 .new-article-list-item a{
-    display: flex;
+    display: block;
+    height: 100%;
 }
-.new-article-img{
-    width:60px;
-    height: 60px;
-}
+
 .new-article-title{
-    width:160px;
     font-size:1.4rem;
-    padding:3px 5px;
+    padding:5px 8px;
 }
 .new-article-list-item:not(:first-of-type){
     margin-top:20px;
@@ -408,12 +405,12 @@ a{
     width: 220px;
     margin: 0 auto;
 }
-.month-list-item a{
+.month-list li a{
     display: block;
     padding:3px 5px;
 }
 
-.month-list-item:not(:first-child){
+.month-list li:not(:first-child){
     margin-top:10px;
 }
 .page-list-wrapper{

@@ -7,24 +7,24 @@
         <h3 class="sidebar-section-title">新着記事</h3>
         <div class="sidebar-section-content">
             <ul class="new-article-list">
+                <?php 
+                $args = array(
+                    'posts_per_page'=>3
+                );
+                $posts = get_posts($args);
+                foreach($posts as $post):
+                    error_log('$postの中身；'.print_r($post,true));
+                setup_postdata($post);
+                ?>
                 <li class="new-article-list-item">
-                    <a href="">
-                        <img src="" alt="" class="new-article-img">
-                        <p class="new-article-title">サンプルサンプルサンプル</p>
+                    <a href="<?php the_permalink();?>">
+                        <p class="new-article-title"><?php the_title();?></p>
                     </a>
                 </li>
-                <li class="new-article-list-item">
-                    <a href="">
-                        <img src="" alt="" class="new-article-img">
-                        <p class="new-article-title">サンプルサンプルサンプル</p>
-                    </a>
-                </li>
-                <li class="new-article-list-item">
-                    <a href="">
-                        <img src="" alt="" class="new-article-img">
-                        <p class="new-article-title">サンプルサンプルサンプル</p>
-                    </a>
-                </li>
+                <?php 
+                endforeach;
+                wp_reset_postdata();
+                ?>
             </ul>
         </div>
     </div>
@@ -50,26 +50,7 @@
         <h3 class="sidebar-section-title">月別アーカイブ</h3>
         <div class="sidebar-section-content">
             <ul class="month-list">
-                <li class="month-list-item">
-                    <a href="">
-                        2021/10 (5)
-                    </a>
-                </li>
-                <li class="month-list-item">
-                    <a href="">
-                        2021/9 (9)
-                    </a>
-                </li>
-                <li class="month-list-item">
-                    <a href="">
-                        2021/8 (12)
-                    </a>
-                </li>
-                <li class="month-list-item">
-                    <a href="">
-                        2021/7 (24)
-                    </a>
-                </li>
+                <?php wp_get_archives('post_type=post&type=monthly&show_post_count=1');?>
             </ul>
         </div>
     </div>
